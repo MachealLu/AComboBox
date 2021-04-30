@@ -17,11 +17,11 @@ The usage is pretty straightforward. Add the tag into the XML layout:
  List<String> dataset = new LinkedList<>(Arrays.asList("Menu1", "Menu2", "Menu3", "Menu4", "Menu5"));
  box.setDataSet(dataset);
 ```
- you can eanable edit mode or not with contents:
+ You can eanable edit mode or not with contents:
 ```java
  bool editable = false;
  box.setEditable(editable)
-
+```
 #### Listeners
 For listening to the item selection actions, you can just use the following snippet:
 ```java
