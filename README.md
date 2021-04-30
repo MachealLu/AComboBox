@@ -14,7 +14,13 @@ The usage is pretty straightforward. Add the tag into the XML layout:
  Then use this snippet to populate it with contents:
 ```java
  ComboBox comb = (ComboBox) findViewById(R.id.box);
- List<String> dataset = new LinkedList<>(Arrays.asList("Menu1", "Menu2", "Menu3", "Menu4", "Menu5"));
+ List<String> dataset = new LinkedList<>();
+ dataset.add("Menu1");
+ dataset.add("Menu2");
+ dataset.add("Menu3");
+ dataset.add("Menu4");
+ dataset.add("Menu5");
+ dataset.add("Menu6");
  box.setDataSet(dataset);
 ```
  You can eanable edit mode or not with contents:
