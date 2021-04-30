@@ -5,7 +5,7 @@ A ComboBox Widget just like Spinner for Android
 
 The usage is pretty straightforward. Add the tag into the XML layout:
 ```xml
- <com.lyd.combbox
+ <com.lyd.box.ComboBox
    android:id="@+id/box"
    android:layout_width="wrap_content"
    android:layout_height="wrap_content"
