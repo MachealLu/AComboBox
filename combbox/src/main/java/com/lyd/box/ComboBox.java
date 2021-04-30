@@ -415,39 +415,9 @@ public class ComboBox extends AppCompatEditText {
         this.selectedTextFormatter = textFormatter;
     }
 
-    /************************************APIS***********************************/
-
-
-    public <T> void addItem(T anObject) {
-
-    }
-
-    public <T> void insertItemAt(T anObject, int index) {
-    }
-
-    public <T> void removeltem(T anObject) {
-
-    }
-
-    void removeItemAt(int anlndex) {
-    }    ///在下拉列表框中删除指定位置的对象项
-
-    void removeAllItems() {
-    }
-
-    int getItemCount() {
-        return 0;
-    }
-
-    Object getItemAt(int index) {
-        return null;
-    }
-
-    public int getSelectedIndex() {
-        return selectedIndex;
-    }
-
-    Object getSelectedltem() {
-        return null;
+    public void setEditable(boolean editable) {
+        this.setEnabled(editable);
+        this.setFocusable(editable);
+        this.setFocusableInTouchMode(editable);
     }
 }

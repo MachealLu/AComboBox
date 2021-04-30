@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Context mContext;
 
-     ComboBox spinner, spinner1;
+     ComboBox  box1, box2;
      Button btn1, btn2, btn3;
 
      boolean  edit = true;
@@ -27,14 +27,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mContext = this;
 
-        spinner = findViewById(R.id.box);
-        spinner1 = findViewById(R.id.box2);
+        box1 = findViewById(R.id.box);
+        box2 = findViewById(R.id.box2);
         btn1 = findViewById(R.id.btn1);
 
         btn2 = findViewById(R.id.btn2);
         btn3 = findViewById(R.id.btn3);
 
-        spinner.setSingleLine();
         setupDefault();
         setupTintedWithCustomClass();
         setupXml();
@@ -69,14 +68,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 edit = !edit;
-                spinner.setEnabled(edit);
-                spinner.setFocusable(edit);
-                spinner.setFocusableInTouchMode(edit);
-                //spinner.requestFocus();
 
-                spinner1.setEnabled(edit);
-                spinner1.setFocusable(edit);
-                spinner1.setFocusableInTouchMode(edit);
             }
         });
     }
@@ -110,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 //                Toast.makeText(mContext, "Selected: " + person.toString(), Toast.LENGTH_SHORT).show();
 //            }
 //        });
-        spinner.setDataSet(people);
+        box1.setDataSet(people);
     }
 
     private void setupDefault() {
