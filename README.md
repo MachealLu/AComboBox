@@ -61,6 +61,6 @@ allprojects {
 }
 
 dependencies {
-    implementation 'com.github.lyd:combobox:1.0.0'
+   implementation 'com.github.MachealLu:ComboBox:v1.0.0'
 }
 
