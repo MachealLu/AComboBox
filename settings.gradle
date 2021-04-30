@@ -1,0 +1,3 @@
+include ':combbox'
+include ':app'
+rootProject.name = "combobox-widget"

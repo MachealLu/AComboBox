@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">combobox-widget</string>
+
+    <string-array name="courses" tools:ignore="ExtraTranslation">
+        <item>English</item>
+        <item>Chinese</item>
+        <item>Math</item>
+    </string-array>
+</resources>
