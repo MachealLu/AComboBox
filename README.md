@@ -27,8 +27,8 @@ For listening to the item selection actions, you can just use the following snip
 ```java
 spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
     @Override
-    public void onItemSelected(NiceSpinner parent, View view, int position, long id) {
-        String item = parent.getItemAtPosition(position);
+    public void onItemSelected(ComboBox parent, View view, int position, long id) {
+        String item = parent.getItemAt(position);
         ...
     }
 });
