@@ -1,7 +1,7 @@
 # ComboBox widget for android
 A ComboBox Widget just like Spinner for Android 
 
-![alt tag](Screenrecording_20210507_110514.mp4)
+![alt tag](combbox-demo.gif)
 
 ### Usage
 
