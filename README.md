@@ -1,6 +1,8 @@
 # ComboBox widget for android
 A ComboBox Widget just like Spinner for Android 
 
+![alt tag](Screenrecording_20210507_110514.mp4)
+
 ### Usage
 
 The usage is pretty straightforward. Add the tag into the XML layout:
