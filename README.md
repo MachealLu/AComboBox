@@ -1,3 +1,4 @@
+![combobox-demo](https://user-images.githubusercontent.com/6856748/117393536-eb865700-af26-11eb-970d-5d92d3d6976a.gif)
 # ComboBox widget for android
 A ComboBox Widget just like Spinner for Android 
 
