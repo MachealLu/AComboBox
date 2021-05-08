@@ -70,6 +70,6 @@ allprojects {
 }
 
 dependencies {
-   implementation 'com.github.MachealLu:ComboBox:v1.0.0'
+   implementation 'com.github.MachealLu:AComboBox:v1.0.0'
 }
 
