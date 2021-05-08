@@ -6,65 +6,52 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn1"
-        android:layout_width="match_parent"
+    <Switch
+        android:id="@+id/open_switch"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
         android:text="编辑模式"
         android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:checked="true"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:text="添加"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:text="删除"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
     <com.lyd.box.ComboBox
         android:id="@+id/box"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="32dp"
+        android:layout_margin="16dp"
         android:textSize="20sp" />
-    <com.lyd.box.ComboBox
-        android:id="@+id/box2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="32dp"
-        android:textSize="20sp"
-        app:entries="@array/courses"
-        />
-<!--    <com.lyd.combbox.ComboBox-->
-<!--        android:id="@+id/box2"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginLeft="16dp"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:layout_marginRight="16dp"-->
-<!--        app:entries="@array/courses" />-->
+    <!--    <com.lyd.box.ComboBox-->
+    <!--        android:id="@+id/box2"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="32dp"-->
+    <!--        android:textSize="20sp"-->
+    <!--        app:entries="@array/courses"-->
+    <!--        />-->
+    <!--    <com.lyd.combbox.ComboBox-->
+    <!--        android:id="@+id/box2"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="16dp"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:layout_marginRight="16dp"-->
+    <!--        app:entries="@array/courses" />-->
 
-<!--    <com.lyd.combbox.ComboBox-->
-<!--        android:id="@+id/box3"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="16dp"-->
-<!--        android:layout_marginLeft="16dp"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:layout_marginEnd="16dp"-->
-<!--        android:layout_marginRight="16dp"-->
-<!--        app:arrowTint="@color/colorPrimary"-->
-<!--        app:backgroundSelector="@drawable/background_selector"-->
-<!--        app:textTint="@color/colorPrimary" />-->
+    <!--    <com.lyd.combbox.ComboBox-->
+    <!--        android:id="@+id/box3"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        android:layout_marginLeft="16dp"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:layout_marginRight="16dp"-->
+    <!--        app:arrowTint="@color/colorPrimary"-->
+    <!--        app:backgroundSelector="@drawable/background_selector"-->
+    <!--        app:textTint="@color/colorPrimary" />-->
 
 </LinearLayout>

@@ -1,11 +1,11 @@
 package com.lyd.example;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.lyd.box.ComboBox;
 
@@ -13,112 +13,40 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
-    private Context mContext;
-
-     ComboBox  box1, box2;
-     Button btn1, btn2, btn3;
-
-     boolean  edit = true;
+    private ComboBox box1;
+    private Switch mSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mContext = this;
+        initView();
+    }
 
+    private void initView() {
         box1 = findViewById(R.id.box);
-        box2 = findViewById(R.id.box2);
-        btn1 = findViewById(R.id.btn1);
-
-        btn2 = findViewById(R.id.btn2);
-        btn3 = findViewById(R.id.btn3);
-
-        setupDefault();
-        setupTintedWithCustomClass();
-        setupXml();
-
-    }
-
-
-    private void setupXml() {
-//        NiceSpinner spinner = findViewById(R.id.niceSpinnerXml);
-//        spinner.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(NiceSpinner parent, View view, int position, long id) {
-//                String item = parent.getItemAtPosition(position).toString();
-//                Toast.makeText(TestSpinnerActivity.this, "Selected: " + item, Toast.LENGTH_SHORT).show();
-//            }
-//        });
-
-        btn2.setOnClickListener(new View.OnClickListener() {
+        mSwitch = findViewById(R.id.open_switch);
+        List<String> menu = new ArrayList<>();
+        menu.add("测试菜单1");
+        menu.add("测试菜单2");
+        menu.add("测试菜单3");
+        menu.add("测试菜单4");
+        menu.add("测试菜单5");
+        menu.add("测试菜单6");
+        box1.setDataSet(menu);
+        mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                //spinner.addItem("测试菜单");
-            }
-        });
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                edit = !edit;
-
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b) {
+                    mSwitch.setText("编辑模式");
+                } else {
+                    mSwitch.setText("选择模式");
+                }
+                box1.setEditable(b);
             }
         });
     }
 
-    private void setupTintedWithCustomClass() {
-//        spinner.setBackground(null);
-        List<String> people = new ArrayList<>();
-
-        people.add("Stark");
-        people.add("Rogers");
-        people.add("Banner");
-        people.add("Bannerssssssssssssssssssssss");
-        people.add("Bannesssfsfswwfsfsfsfevehashar");
-        people.add("Bannpbpaohfpaohg[]sljiojnmuioihhjer");
-        people.add("Banner");
-
-//        SpinnerTextFormatter textFormatter = new SimpleSpinnerTextFormatter() {
-//            @Override
-//            public Spannable format(String text) {
-//                return new SpannableString(person.getName() + " " + person.getSurname());
-//            }
-//
-//        };
-
-//        spinner.setSpinnerTextFormatter(textFormatter);
-//        spinner.setSelectedTextFormatter(textFormatter);
-//        spinner.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(NiceSpinner parent, View view, int position, long id) {
-//                Person person = (Person) spinner.getSelectedItem();
-//                Toast.makeText(mContext, "Selected: " + person.toString(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
-        box1.setDataSet(people);
-    }
-
-    private void setupDefault() {
-//        NiceSpinner spinner = findViewById(R.id.nice_spinner);
-//        spinner.setLines(1);
-//        spinner.setEllipsize(TextUtils.TruncateAt.END);
-//        List<String> dataset = new LinkedList<>(Arrays.asList("测试惨淡选择条目", "Two", "Three", "测试惨淡选择条222目", "Five"));
-//        spinner.attachDataSource(dataset);
-//        spinner.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(NiceSpinner parent, View view, int position, long id) {
-//                String item = parent.getItemAtPosition(position).toString();
-//                Toast.makeText(mContext, "Selected: " + item, Toast.LENGTH_SHORT).show();
-//            }
-//        });
-    }
 
     class Person {
 
